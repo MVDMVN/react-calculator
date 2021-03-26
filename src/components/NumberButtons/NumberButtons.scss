@@ -1,0 +1,39 @@
+.buttons-area {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+
+  .clear-button {
+    width: 100%;
+    height: 40px;
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .numbers-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: center;
+    width: 80%;
+
+    .number-button {
+      width: 33%;
+      height: 50px;
+    }
+  }
+
+  .operators-container {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+
+    .operator-button {
+      height: 50px;
+    }
+  }
+}

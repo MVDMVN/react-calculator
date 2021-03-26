@@ -1,41 +1,30 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import './NumberButtons.scss';
 
 function NumberButtons() {
-  const [numbers, setNumber] = useState("");
-  const [method, setMethod] = useState(null);
-
-  const onNumberClicked = (event) => {
-    let currentSymbol = event.currentTarget.textContent;
-    let newNumbers = numbers + currentSymbol;
-    let numberToCount = `${newNumbers}`;
-    if (
-      currentSymbol === "*" ||
-      currentSymbol === "/" ||
-      currentSymbol === "+" ||
-      currentSymbol === "-"
-    ) {
-      setMethod(currentSymbol);
-    }
-    setNumber(numberToCount);
-  };
-
   return (
-    <div className="number-buttons">
-      <button onClick={onNumberClicked}>1</button>
-      <button onClick={onNumberClicked}>2</button>
-      <button onClick={onNumberClicked}>3</button>
-      <button onClick={onNumberClicked}>4</button>
-      <button onClick={onNumberClicked}>5</button>
-      <p>{numbers}</p>
-
-      <p>{method}</p>
-
-      <button onClick={onNumberClicked}>+</button>
-      <button onClick={onNumberClicked}>-</button>
-      <button onClick={onNumberClicked}>/</button>
-      <button onClick={onNumberClicked}>*</button>
-
-      {/* <p>{result}</p> */}
+    <div className="buttons-area">
+      <button className="clear-button">Clear</button>
+      <div className="buttons-container">
+        <div className="numbers-container">
+          <button className="number-button">1</button>
+          <button className="number-button">1</button>
+          <button className="number-button">1</button>
+          <button className="number-button">1</button>
+          <button className="number-button">1</button>
+          <button className="number-button">1</button>
+          <button className="number-button">1</button>
+          <button className="number-button">1</button>
+          <button className="number-button">1</button>
+          <button className="number-button">1</button>
+        </div>
+        <div className="operators-container">
+          <button className="operator-button">+</button>
+          <button className="operator-button">-</button>
+          <button className="operator-button">*</button>
+          <button className="operator-button">/</button>
+        </div>
+      </div>
     </div>
   );
 }
